@@ -1,4 +1,5 @@
-1const libros = [
+
+const libros = [
     {
         titulo: "Cien años de soledad",
         autor: "Gabriel García Márquez",
@@ -19,9 +20,18 @@
     },
 ];
 
-// funcion para buscar libras.
 function mostrarLibros(libros) {
     libros.forEach(libro => {
-        console.log(`${libro.titulo} por ${libro.autor} (${libro.paginas} páginas) - Prestado: ${libro.prestado ? 'Sí' : 'No'}`);
+        console.log(`{libro.titulo} por {libro.autor}`);
     });
+}
+
+function listarLibrosDisponibles(libros) {
+    return libros.filter(libro => !libro.prestado);
+}
+function buscarLibros(libros, criterio) {
+    return libros.filter(libro =>
+        libro.titulo.toLowerCase().includes(criterio.toLowerCase()) ||
+        libro.autor.toLowerCase().includes(criterio.toLowerCase())
+    );
 }
