@@ -18,3 +18,10 @@ const libros = [
         prestado: true,
     },
 ];
+
+// funcion para buscar libras.
+function mostrarLibros(libros) {
+    libros.forEach(libro => {
+        console.log(`${libro.titulo} por ${libro.autor} (${libro.paginas} páginas) - Prestado: ${libro.prestado ? 'Sí' : 'No'}`);
+    });
+}
