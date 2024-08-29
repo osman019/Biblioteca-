@@ -1,4 +1,4 @@
-1const libros = [
+const libros = [
     {
         titulo: "Cien años de soledad",
         autor: "Gabriel García Márquez",
